@@ -47,7 +47,24 @@ public class MainActivity extends AppCompatActivity {
         double peso_num = Double.parseDouble(peso_text);
         double altura_num = Double.parseDouble(altura_text);
 
-        double imc = peso_num/altura_num;
+        double imc = peso_num/(altura_num*altura_num);
+        String classification_imc;
+
+        // Definindo a classificação com base no valor do IMC
+        if (imc < 18.5) {
+            classification_imc = "Abaixo do Peso";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            classification_imc = "Saudável";
+        } else if (imc >= 25 && imc <= 29.9) {
+            classification_imc = "Sobrepeso";
+        } else if (imc >= 30 && imc <= 34.9) {
+            classification_imc = "Obesidade Grau I";
+        } else if (imc >= 35 && imc <= 39.9) {
+            classification_imc = "Obesidade Grau II (severa)";
+        } else {
+            classification_imc = "Obesidade Grau III (mórbida)";
+        }
+
         Intent it = new Intent(getBaseContext(), Tela2.class);
 
         it.putExtra("imc", imc);
@@ -55,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         it.putExtra("idade", idade_num);
         it.putExtra("peso", peso_num);
         it.putExtra("altura", altura_num);
+        it.putExtra("classification_imc", classification_imc);
 
         startActivity(it);
 

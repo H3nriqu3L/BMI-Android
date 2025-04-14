@@ -23,7 +23,7 @@ tools:context=".Tela2">
         />
 
     <TextView
-        android:id="@+id/nome"
+        android:id="@+id/nome_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nome"
@@ -34,17 +34,19 @@ tools:context=".Tela2">
         app:layout_constraintTop_toBottomOf="@id/relatorio"
         app:layout_constraintStart_toStartOf="parent"/>
     <EditText
+        android:id="@+id/nome_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/nome"
-        app:layout_constraintTop_toTopOf="@id/nome"
+        app:layout_constraintStart_toEndOf="@id/nome_rel"
+        app:layout_constraintTop_toTopOf="@id/nome_rel"
+        app:layout_constraintBottom_toBottomOf="@id/nome_rel"
         android:inputType="none"
         />
 
 
     <TextView
-        android:id="@+id/idade"
+        android:id="@+id/idade_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/idade"
@@ -52,19 +54,121 @@ tools:context=".Tela2">
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/nome"
+        app:layout_constraintTop_toBottomOf="@id/nome_rel"
         app:layout_constraintStart_toStartOf="parent"/>
     <EditText
+        android:id="@+id/idade_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@id/idade"
-        app:layout_constraintTop_toTopOf="@id/idade"
+        app:layout_constraintStart_toEndOf="@id/idade_rel"
+        app:layout_constraintTop_toTopOf="@id/idade_rel"
+        app:layout_constraintBottom_toBottomOf="@id/idade_rel"
         android:inputType="none"
         />
 
+    <TextView
+        android:id="@+id/peso_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/peso"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/idade_rel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/peso_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/peso_rel"
+        app:layout_constraintTop_toTopOf="@id/peso_rel"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@id/peso_rel"
+        />
+
+    <TextView
+        android:id="@+id/altura_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/altura"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/peso_rel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/altura_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/altura_rel"
+        app:layout_constraintTop_toTopOf="@id/altura_rel"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@id/altura_rel"
+        />
 
 
+    <TextView
+        android:id="@+id/imc_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/IMC"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/altura_rel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/imc_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/imc_rel"
+        app:layout_constraintTop_toTopOf="@id/imc_rel"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@id/imc_rel"
+        />
+
+    <TextView
+        android:id="@+id/class_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_str"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imc_rel"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/classification_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/class_rel"
+        app:layout_constraintTop_toTopOf="@id/class_rel"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="@id/class_rel"
+        />
+
+
+    <Button
+        android:id="@+id/relatorio_button_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/novoCalc"
+        android:background="@drawable/button_drawable"
+        android:layout_marginTop="100dp"
+        android:onClick="voltar"
+        app:layout_constraintTop_toBottomOf="@id/class_rel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

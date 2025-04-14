@@ -5,4 +5,7 @@
     <string name="peso">Peso (kg):</string>
     <string name="altura">Altura (m):</string>
     <string name="relatorio">Relatório Nutricional</string>
+    <string name="novoCalc">Realizar novo Cálculo</string>
+    <string name="IMC">IMC:</string>
+    <string name="class_str">Classificação:</string>
 </resources>
