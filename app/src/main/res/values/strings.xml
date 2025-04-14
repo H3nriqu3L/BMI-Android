@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MMC</string>
+    <string name="nome">Nome:</string>
+    <string name="idade">Idade:</string>
+    <string name="peso">Peso (kg):</string>
+    <string name="altura">Altura (m):</string>
+    <string name="relatorio">Relatório Nutricional</string>
+</resources>
